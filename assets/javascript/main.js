@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+// created variables
 var reaction;
 var newButton;
 var btnClick;
@@ -10,14 +10,14 @@ var picClick;
 var info;
 var topics = ["Applause", "WTF", "SMH", "Yes", "Congratulations"];
 var subBtn;
-
+// loop that creates buttons for topics
 for (var i = 0; i < topics.length; i++) {
 	newButton = $("<button>");
 	newButton.text(topics[i]);
 	newButton.addClass("btn mr-1 btn-primary");
 	$("#buttonDump").append(newButton);
 }
-
+// click handler that gets the gifs using ajax
 $("#buttonDump").on("click", "button", function() {
 	btnClick = $(this).text();
 	console.log(btnClick);
@@ -42,15 +42,7 @@ $("#buttonDump").on("click", "button", function() {
 		})
 		
 })
-
-function makeImg () {
-			reaction = $("<img>");
-			reaction.attr("src", imageData);
-			reaction.attr("gif", imageGif);
-			reaction.addClass("mr-1 mb-1");
-			$("#gifDump").append(reaction);
-}
-
+// turns the stills into gifs, and vice-versa
 $("#gifDump").on("click", "img", function() {
 		picClick = $(this).attr("src");
 	  if (picClick === $(this).attr("src")) {
@@ -62,7 +54,7 @@ $("#gifDump").on("click", "img", function() {
       }
 
 })
-	
+// makes buttons for input submissions 
 $("#submit").on("click", function() {
 		info = $("#input").val();
 		if (info === "") {return;}

@@ -1,1 +1,3 @@
 # Giftastic
+
+In this website, four gif buttons are preloaded. Once a button is clicked on, ten gifs appear. To play a gif, the user has to click on the image. The user can also stop the image by clicking on it again. If a user wants to see a new category of gifs, there is an input field where the user can type whatever gif they would like to see. This new gif category is created into a button which appears next to the preloaded buttons area. This site uses the giphy api. 
